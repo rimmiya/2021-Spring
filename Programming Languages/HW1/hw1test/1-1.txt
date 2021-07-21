@@ -1,0 +1,43 @@
+[Header]
+
+[Test]
+gcd 10 0
+
+[Value]
+10
+
+[Test]
+gcd 9 5
+
+[Value]
+1
+
+[Test]
+gcd 13 13
+
+[Value]
+13
+
+[Test]
+gcd 37 600
+
+[Value]
+1
+
+[Test]
+gcd 20 100
+
+[Value]
+20
+
+[Test]
+gcd 624129 2061517
+
+[Value]
+18913
+
+[Test]
+gcd 0 0
+
+[Value]
+0

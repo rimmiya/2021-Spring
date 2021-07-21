@@ -1,0 +1,49 @@
+[Header]
+
+[Test]
+balanced Empty
+
+[Value]
+true
+
+[Test]
+balanced (Node (2, Empty, Empty))
+
+[Value]
+true
+
+[Test]
+balanced (Node (15, Node (3, Empty, Empty), Empty))
+
+[Value]
+true
+
+[Test]
+balanced( Node (15, Node (3, Empty, Empty), Node (44, Empty, Empty)))
+
+[Value]
+true
+
+[Test]
+balanced (Node (15, Node (3, Node (12, Node (7, Empty, Empty), Empty), Empty), Node (44, Node (1, Empty, Empty), Empty)))
+
+[Value]
+false
+
+[Test]
+balanced (Node (15, Node (3, Node (12, Empty, Empty), Empty), Node (44, Node (1, Empty, Node (17, Empty, Empty)), Empty)))
+
+[Value]
+false
+
+[Test]
+balanced (Node (15, Node (3, Node (12, Node (7, Empty, Empty), Empty), Empty), Node (44, Node (1, Empty, Node (17, Empty, Empty)), Empty)))
+
+[Value]
+false
+
+[Test]
+balanced (Node (15, Node (3, Node (12, Empty, Empty), Node (5, Empty, Empty)), Node (44, Node (77, Empty, Empty), Node (0, Empty, Empty))))
+
+[Value]
+true

@@ -1,0 +1,79 @@
+[Header]
+
+let equals v1 v2 = 
+    v1 = v2
+
+let test t1 t2 answer =
+  let v = pascal t1 in
+  (equals v answer)
+
+
+[Test]
+let t1 : int * int = (0,0) in
+test t1 1
+
+[Value]
+true
+
+[Test]
+let t2 : int * int = (4,2) in
+test t2 6
+
+[Value]
+true
+
+[Test]
+let t3 : int * int = (7,2) in
+test t3 21
+
+[Value]
+true
+
+[Test]
+let t4 : int * int = (9,4) in
+test t4 126
+
+[Value]
+true
+
+[Test]
+let t5 : int * int = (9,5) in
+test t5 126
+
+[Value]
+true
+
+[Test]
+let t6 : int * int = (22,10) in
+test t6 646646
+
+[Value]
+true
+
+[Test]
+let t7 : int * int = (25,12) in
+test t7 5200300
+
+[Value]
+true
+
+[Test]
+let t8 : int * int = (25,25) in
+test t8 1
+
+[Value]
+true
+
+[Test]
+let t9 : int * int = (26,13) in
+test t9 10400600
+
+[Value]
+true
+
+[Test]
+let t10 : int * int = (26,0) in
+test t10 1
+
+[Value]
+true

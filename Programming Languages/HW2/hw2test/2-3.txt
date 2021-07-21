@@ -1,0 +1,96 @@
+[Header]
+
+type bigint = BigInt of string
+type op = ADD | MUL
+
+let equals v1 v2 = 
+    v1 = v2
+
+let test t1 t2 answer =
+  let v = compute_bigint t1 t2 in
+  (equals v answer)
+
+
+[Test]
+let t1a1 : op = ADD in
+let t1a2 : bigint * bigint = (BigInt "1231244755", BigInt "1999938449585") in
+test t1a1 t1a2 (BigInt "2001169694340")
+
+compute_bigint ADD (BigInt "1231244755", BigInt "999938449585")
+
+[Value]
+true
+
+[Test]
+let t2a1 : op = ADD in
+let t2a2 : bigint * bigint = (BigInt "82374894584572394384923", BigInt "746574782378345") in
+test t2a1 t2a2 (BigInt "82374895331147176763268")
+
+[Value]
+true
+
+[Test]
+let t3a1 : op = ADD in
+let t3a2 : bigint * bigint = (BigInt "111111", BigInt "111111") in
+test t3a1 t3a2 (BigInt "222222")
+
+[Value]
+true
+
+[Test]
+let t4a1 : op = ADD in
+let t4a2 : bigint * bigint = (BigInt "101010101010101010101010", BigInt "10101010101010101010101") in
+test t4a1 t4a2 (BigInt "111111111111111111111111")
+
+[Value]
+true
+
+[Test]
+let t5a1 : op = ADD in
+let t5a2 : bigint * bigint = (BigInt "5555555", BigInt "99999995555555") in
+test t5a1 t5a2 (BigInt "100000001111110")
+
+[Value]
+true
+
+[Test]
+let t6a1 : op = MUL in
+let t6a2 : bigint * bigint = (BigInt "12341234", BigInt "112342") in
+test t6a1 t6a2 (BigInt "1386438910028")
+
+[Value]
+true
+
+[Test]
+let t7a1 : op = MUL in
+let t7a2 : bigint * bigint = (BigInt "127461278467382136", BigInt "1") in
+test t7a1 t7a2 (BigInt "127461278467382136")
+
+[Value]
+true
+
+[Test]
+let t8a1 : op = MUL in
+let t8a2 : bigint * bigint = (BigInt "38758745", BigInt "49483847") in
+test t8a1 t8a2 (BigInt "1917931807492015")
+
+[Value]
+true
+
+[Test]
+let t9a1 : op = MUL in
+let t9a2 : bigint * bigint = (BigInt "999999999", BigInt "1234567890") in
+test t9a1 t9a2 (BigInt "1234567888765432110")
+
+compute_bigint MUL (BigInt "96", BigInt "21")
+
+[Value]
+true
+
+[Test]
+let t10a1 : op = MUL in
+let t10a2 : bigint * bigint = (BigInt "101010101010", BigInt "1111111111") in
+test t10a1 t10a2 (BigInt "112233445555443322110")
+
+[Value]
+true
